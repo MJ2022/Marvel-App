@@ -1,6 +1,6 @@
 package com.example.marvelapp
 
-sealed class Items_menu (
+    sealed class Items_menu (
     val icon: Int,
     val title: String,
     val ruta: String

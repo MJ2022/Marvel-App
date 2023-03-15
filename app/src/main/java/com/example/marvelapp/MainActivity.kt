@@ -3,6 +3,7 @@ package com.example.marvelapp
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.widget.Toolbar
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
@@ -12,6 +13,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.modifier.modifierLocalOf
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -55,7 +57,8 @@ fun PantallaPrincipal() {
 
     Scaffold(
         scaffoldState= scaffoldState,
-        bottomBar = {NavegacionInferior(navController, navigation_item)}
+        bottomBar = {NavegacionInferior(navController, navigation_item)},
+        topBar = { Toolbar() }
     ) {
         NavigationHost(navController)
     }
@@ -65,6 +68,14 @@ fun PantallaPrincipal() {
 fun currentRoute(navController: NavHostController): String? {
     val entrada by navController.currentBackStackEntryAsState()
     return entrada?.destination?.route
+}
+
+@Composable
+fun Toolbar(){
+    TopAppBar(
+        title= { Text(text ="Marvel Consultant",color = colorResource(id = R.color.white))},
+        backgroundColor = colorResource(id = R.color.red)
+    )
 }
 
 @Composable
