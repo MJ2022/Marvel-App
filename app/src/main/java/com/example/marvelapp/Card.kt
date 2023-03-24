@@ -22,7 +22,7 @@ import coil.compose.AsyncImage
 fun Card(item: ConstantData) {
     Card(
         modifier = Modifier
-            .padding(40.dp,100.dp)
+            .padding(40.dp,40.dp)
             .clickable { }
             .fillMaxWidth(),
         elevation = 8.dp,
