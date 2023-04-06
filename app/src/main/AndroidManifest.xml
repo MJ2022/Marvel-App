@@ -15,7 +15,7 @@
         android:theme="@style/Theme.MarvelApp"
         tools:targetApi="31">
         <activity
-            android:name=".CharacterInformation"
+            android:name=".view.character.CharacterInformationActivity"
             android:exported="false"
             android:label="Personajes"
             android:theme="@style/Theme.MarvelApp">
@@ -23,6 +23,24 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".view.comic.ComicInformationActivity"
+            android:exported="false"
+            android:label="Comics"
+            android:theme="@style/Theme.MarvelApp">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+        android:name=".view.series.SeriesInformationActivity"
+        android:exported="false"
+        android:label="Series"
+        android:theme="@style/Theme.MarvelApp">
+        <meta-data
+            android:name="android.app.lib_name"
+            android:value="" />
+    </activity>
 
         <activity
             android:name=".MainActivity"
