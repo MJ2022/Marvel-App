@@ -14,10 +14,13 @@ data class ComicInfoTable(
     val id: Int,
 
     @ColumnInfo(name = "title")
-    val name: String,
+    val title: String,
 
     @ColumnInfo(name = "description")
     val description: String,
+
+    @ColumnInfo(name = "pageCount")
+    val pageCount: String,
 
     @ColumnInfo(name = "thumbnail")
     val thumbnail: String,
@@ -31,13 +34,12 @@ data class ComicInfoTable(
     @ColumnInfo(name = "events")
     val events: String,
 
-    @ColumnInfo(name = "pageCount")
-    val pageCount: String,
-
-    @ColumnInfo(name = "prices")
-    val prices: String,
+    @ColumnInfo(name = "series")
+    val series: String,
 
     @ColumnInfo(name = "stories")
     val stories: String,
 
+
     ) : Parcelable
+

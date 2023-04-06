@@ -14,7 +14,7 @@ data class SeriesInfoTable(
     val id: Int,
 
     @ColumnInfo(name = "title")
-    val name: String,
+    val title: String,
 
     @ColumnInfo(name = "description")
     val description: String,

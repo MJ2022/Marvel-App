@@ -20,7 +20,7 @@ import com.example.marvelapp.viewmodel.CharacterViewModel
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 
-
+/*
 @Composable
 fun NavigationHost(navController: NavHostController, characterViewModel: CharacterViewModel){
 
@@ -97,5 +97,5 @@ fun CharacterList(
             }
         }
     }
-}
+}*/
 

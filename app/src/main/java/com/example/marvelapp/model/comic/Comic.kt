@@ -8,13 +8,13 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Comic(
     val id: Int,
-    val name: String,
+    val title: String,
     val description: String,
     val thumbnail: Thumbnail,
     val characters: CategoryList?,
     val creators: CategoryList?,
     val events: CategoryList?,
     val pageCount: String,
-    val prices: String,
     val stories: CategoryList?,
+    val series: CategoryList?,
 ) : Parcelable

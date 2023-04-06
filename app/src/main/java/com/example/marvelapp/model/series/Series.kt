@@ -9,7 +9,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Series(
     val id: Int,
-    val name: String,
+    val title: String,
     val description: String,
     val thumbnail: Thumbnail,
     val comics: CategoryList?,

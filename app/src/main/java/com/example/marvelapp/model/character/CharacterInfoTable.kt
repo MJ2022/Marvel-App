@@ -35,3 +35,4 @@ data class CharacterInfoTable(
     val series: String,
 
     ) : Parcelable
+

@@ -22,7 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberImagePainter
 import coil.size.Scale
-import com.example.marvelapp.CharacterInformation
+import com.example.marvelapp.view.character.CharacterInformationActivity
 import com.example.marvelapp.R
 import com.example.marvelapp.model.character.Character
 
@@ -44,18 +44,13 @@ fun CharacterItem(
                 modifier = Modifier
                     .fillMaxSize()
                     .clickable {
-                        val intent = Intent(context, CharacterInformation::class.java)
+                        val intent = Intent(context, CharacterInformationActivity::class.java)
                         intent.putExtra("character", character)
                         context.startActivity(intent)
                     }
-            )
-            {
-
+            ) {
                 Box(modifier = Modifier.fillMaxSize()) {
-
-                    //Marvel character image conversion
                     val imageUrl = character.thumbnail.path + "." + character.thumbnail.extension
-
                     Image(
                         contentDescription = character.description,
                         contentScale = ContentScale.FillWidth,
@@ -68,17 +63,12 @@ fun CharacterItem(
                                 placeholder(R.drawable.logo_marvel)
                             })
                     )
-
                     Box(
                         modifier = Modifier.fillMaxSize(),
                         contentAlignment = Alignment.BottomCenter
                     ) {
-
-                        // Creating a Vertical Gradient Color
                         val gradientGrayWhite =
                             Brush.verticalGradient(0f to Color.Transparent, 500f to Color.Black)
-
-                        //Marvel character name
                         Text(
                             text = character.name,
                             textAlign = TextAlign.Center,
